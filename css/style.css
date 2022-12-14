@@ -1,0 +1,76 @@
+body{
+    /* color of choice */
+    background-color: #ffebcd;
+  }
+  
+  #container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*  ^ centering  */
+    gap: 20px;
+    /*  ^ spaces the images out  */
+    margin-top: 200px; 
+    /*  ^ shifts the image container down a little  */
+    
+  }
+  
+  #container h2{
+    position: absolute;
+    /* ^ break the flex direction row for centering*/
+    top: 75px;
+    /* ^ shifts the h2 down a little  */
+    color: rgb(21, 85, 1);
+    background-color: rgb(240, 161, 64);
+    font-size: 60px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  #container img{
+    /* modify the width and height as needed */
+    width: 400px;
+    height: 450px;
+    transition: 1s;
+    object-fit:cover;
+  /*   basic image styling + transition for bx shadow*/
+  }
+  
+  #container img:hover{
+    /* box shadow color can be modified to your liking */
+    box-shadow: rgba(0, 0, 0, 0.65) 0px 25px 50px -12px;
+  }
+  
+  #popup{
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  /*  ^ center the popup/modal */
+    width: 500px;
+    height: 500px;
+    /* modal width and height can be adjusted based on picture display */
+    background-color: #aaa;
+    /* your choosing */
+    display: none;
+  /*  ^ hides the modal until we click an img */
+  }
+  
+  #popup img{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  /*   ^ centers the modal imgbox */
+    width: 700px;
+    height: 700px;
+    /* modify as needed */
+  }
+  
+  #popup a{
+    text-decoration: none;
+    color: black;
+    font-size: 40px;
+    position: relative;
+    right: 80px;
+  /*   ^ styles the modal 'x' */
+  }
+  
